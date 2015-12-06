@@ -17,6 +17,44 @@
     <!-- css/styles -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mThumbnailScroller.css">
+     <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <style>
+    .content {
+       
+        width: 80%;
+       
+    }
+    /*
+    .content li {
+        margin: 4px;
+        overflow: hidden;
+    }
+    
+    .content li a {
+        display: inline-block;
+        border: 7px solid rgba(255, 255, 255, .1);
+    }
+    
+    .content.light,
+    .content.light .mTSButton {
+        background-color: #c2beb2;
+    }
+    
+    .content.light li a {
+        border: 7px solid rgba(255, 255, 255, .4);
+    }
+    
+    #content-1,
+    #content-2 {
+        width: auto;
+        height: 600px;
+    }
+    
+    #content-3 .mTSButton {
+        background-color: #333;
+    }*/
+    </style>
 </head>
 
 <body id="home">
@@ -76,6 +114,56 @@
     </section>
     <!-- end of carousel -->
     <!-- start of product catalogue -->
+    <section id="products" class=" padding-top-bottom">
+        <!-- demo content -->
+         <div class="row">
+        <div id="content-3" class="content container">
+            <ul>
+                <li>
+                      <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/01.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+                </li>
+                <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/02.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+                     <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/03.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+                     <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/04.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+                     <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/05.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+                     <div class="img-box">
+                        <div class="hover-mask2"></div>
+                           <img class="img-responsive project-image" src="thumbnails/06.jpg" width=300 height=400 alt="">
+                       
+                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                    </div>
+            </ul>
+         
+        </div>
+        <button id="#nadej" >Click me</button>
+
+        <!-- -//- -->
+    </section>
     <!-- end of product catalogue -->
     <!-- start of shiping timer utility -->
     <!-- end of shiping timer utility -->
@@ -100,6 +188,8 @@
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <!-- superslides -->
     <script type="text/javascript" src="bower_components/superslides/dist/jquery.superslides.min.js"></script>
+    <!-- scroller -->
+    <script src="js/jquery.mThumbnailScroller.js"></script>
     <!-- Scripts -->
     <!-- custom Js -->
     <script type="text/javascript" src="js/custom.js"></script>
