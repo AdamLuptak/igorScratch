@@ -18,46 +18,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/superslides.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.mThumbnailScroller.css">
-     <link rel="stylesheet" type="text/css" href="css/icons.css">
-    <style>
-    .content {
-       
-        width: 80%;
-       
-    }
-    /*
-    .content li {
-        margin: 4px;
-        overflow: hidden;
-    }
-    
-    .content li a {
-        display: inline-block;
-        border: 7px solid rgba(255, 255, 255, .1);
-    }
-    
-    .content.light,
-    .content.light .mTSButton {
-        background-color: #c2beb2;
-    }
-    
-    .content.light li a {
-        border: 7px solid rgba(255, 255, 255, .4);
-    }
-    
-    #content-1,
-    #content-2 {
-        width: auto;
-        height: 600px;
-    }
-    
-    #content-3 .mTSButton {
-        background-color: #333;
-    }*/
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
 </head>
 
-<body id="home">
+<body id="home" ng-app="storeApp">
     <!-- start of  nav-bar -->
     <div id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -116,54 +80,93 @@
     <!-- start of product catalogue -->
     <section id="products" class=" padding-top-bottom">
         <!-- demo content -->
-         <div class="row">
-        <div id="content-3" class="content container">
-            <ul>
-                <li>
-                      <div class="img-box">
+        <div class="row">
+            <div id="content-3" class="content container">
+                <ul>
+                    <li>
+                        <div class="img-box">
+                            <div class="hover-mask2"></div>
+                            <img class="img-responsive project-image" src="thumbnails/01.jpg" width=300 height=400 alt="">
+                            <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        </div>
+                    </li>
+                    <div class="img-box">
                         <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/01.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        <img class="img-responsive project-image" src="thumbnails/02.jpg" width=300 height=400 alt="">
+                        <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
                     </div>
-                </li>
-                <div class="img-box">
+                    <div class="img-box">
                         <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/02.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        <img class="img-responsive project-image" src="thumbnails/03.jpg" width=300 height=400 alt="">
+                        <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
                     </div>
-                     <div class="img-box">
+                    <div class="img-box">
                         <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/03.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        <img class="img-responsive project-image" src="thumbnails/04.jpg" width=300 height=400 alt="">
+                        <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
                     </div>
-                     <div class="img-box">
+                    <div class="img-box">
                         <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/04.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        <img class="img-responsive project-image" src="thumbnails/05.jpg" width=300 height=400 alt="">
+                        <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
                     </div>
-                     <div class="img-box">
+                    <div class="img-box">
                         <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/05.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
+                        <img class="img-responsive project-image" src="thumbnails/06.jpg" width=300 height=400 alt="">
+                        <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
                     </div>
-                     <div class="img-box">
-                        <div class="hover-mask2"></div>
-                           <img class="img-responsive project-image" src="thumbnails/06.jpg" width=300 height=400 alt="">
-                       
-                      <a href="#"><span class="product-icon fa fa-eye fa-5x"></span></a>
-                    </div>
-            </ul>
-         
-        </div>
-        <button id="#nadej" >Click me</button>
-
-        <!-- -//- -->
+                </ul>
+            </div>
+            <button id="#nadej">Click me</button>
+            <!-- -//- -->
     </section>
+   <section ng-controller="ProductCatalogController">
+
+
+<div id="w">
+    
+
+
+    <h1>Rack</h1>
+    <nav class="slidernav">
+      <div id="navbtns" class="clearfix">
+        <a href="#" class="previous" disabled>prev</a>
+        <a href="#" class="next">next</a>
+ <button class="previous">left</button>
+  <button class="next">right</button>  
+
+      </div>
+    </nav>
+
+  
+
+    <div class="crsl-items" data-navigation="navbtns" >
+      <div class="crsl-wrap">
+       
+
+        <div class="crsl-item" ng-repeat="product in products" >
+          <div class="thumbnail">
+            <img src="{{product.url}}" alt="nyc subway">
+            <span class="postdate">Feb 16, 2014</span>
+          </div>
+          
+          <span ><a  style="margin-right: 20em;" href="#">{{product.name}}</a></span>
+
+           <span ><a href="#">{{product.price}} {{product.id}}</a></span>
+         
+          
+          
+        </div><!-- post #1 -->
+       
+       
+      </div><!-- @end .crsl-wrap -->
+    </div><!-- @end .crsl-items -->
+    
+  </div><!-- @end #w -->
+   </section>
+ 
+
+
     <!-- end of product catalogue -->
     <!-- start of shiping timer utility -->
     <!-- end of shiping timer utility -->
@@ -190,11 +193,14 @@
     <script type="text/javascript" src="bower_components/superslides/dist/jquery.superslides.min.js"></script>
     <!-- scroller -->
     <script src="js/jquery.mThumbnailScroller.js"></script>
+    <!-- imageSlide -->
+    <script src="js/responsiveCarousel.min.js"></script>
     <!-- Scripts -->
     <!-- custom Js -->
     <script type="text/javascript" src="js/custom.js"></script>
     <!-- end of javaScripts -->
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controller/productCatalogController.js"></script>
 </body>
 
 </html>
