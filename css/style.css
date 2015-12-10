@@ -113,7 +113,7 @@ h3.center {
 .image-bg {
     overflow: hidden;
     background-size: cover;
-    background-image: url('../img/12.jpg');
+   
     background-position: center 16%;
     position: relative;
 }
@@ -477,7 +477,7 @@ footer {
 }
 
 .img-box:hover .hover-mask2 {
-    opacity: .5;
+    opacity: .2;
     cursor: pointer;
     -o-transition: .1s;
     -ms-transition: .1s;
@@ -728,16 +728,14 @@ footer {
 }
 
 
-/** media queries **/
-@media screen and (max-width: 660px) {
-  h1 { font-size: 2.4em; line-height: 1.2em; }
-  
-  .crsl-item h3 { font-size: 1.65em; }
-}
 
-/** clearfix **/
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
- 
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
+/*owl carousel*/
+ #owl-demo .item {
+        margin: 3em;
+    }
+    
+    #owl-demo .item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
