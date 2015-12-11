@@ -113,7 +113,6 @@ h3.center {
 .image-bg {
     overflow: hidden;
     background-size: cover;
-   
     background-position: center 16%;
     position: relative;
 }
@@ -127,6 +126,7 @@ h3.center {
     opacity: 0.5;
     background-color: #000;
     z-index: 10;
+    box-shadow: 0px 5px 5px #888888;
 }
 
 .dark-bg a {
@@ -236,9 +236,9 @@ footer {
 
 .btn-store.outline {
     background: transparent;
-    border: 2px solid #23A657;
+    border: 2px solid #C0C0C0;
     box-shadow: none;
-    color: #23A657;
+    color: #B6B6B6;
     text-decoration: none;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
@@ -282,8 +282,8 @@ footer {
 .btn-store.outline:hover,
 .btn-store.outline:focus,
 .btn-store.outline:active {
-    background: #23A657;
-    color: #FFF;
+    background: #B6B6B6;
+    color: white;
     top: 0;
     text-decoration: none;
 }
@@ -302,7 +302,7 @@ footer {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #23A657;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .ico {
@@ -450,12 +450,16 @@ footer {
 
 /* ------------------------------ products -------------------------- */
 
+
+/* ------------------------------ products -------------------------- */
+
 .project-price {
     position: relative;
     float: right;
     font-weight: 600;
-    font-size: 21px;
+    font-size: 18px;
     margin: 0;
+    color:  black;
 }
 
 .project-oldprice {
@@ -464,7 +468,7 @@ footer {
     margin: 0;
     font-size: 16px;
     text-decoration: line-through;
-    color: #999;
+    color: #F2F2F2;
     padding: 1px 8px 0 0;
     display: inline;
 }
@@ -477,7 +481,7 @@ footer {
 }
 
 .img-box:hover .hover-mask2 {
-    opacity: .2;
+    opacity: .5;
     cursor: pointer;
     -o-transition: .1s;
     -ms-transition: .1s;
@@ -486,10 +490,27 @@ footer {
     transition: .1s;
 }
 
+
 .but {
     position: absolute;
     width: 100%;
     top: 45%;
+}
+
+.product-icon:before {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-size: 30px;
+    margin: -15px 0 0 -15px;
+    -moz-transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
 }
 
 .img-box:hover .product-icon:before {
@@ -503,15 +524,18 @@ footer {
     border: 0;
     width: 100%;
     opacity: 1;
+     font-weight: 600;
+    font-size: 21px;
     padding: 10px 5px 0 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 .product-info div h4 {
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
-    color: #23A657;
+
+    color: black;
     line-height: 24px;
 }
 
@@ -524,14 +548,10 @@ footer {
 .img-box {
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    /* added */
-    margin-right: 1em; /*space between photos*/
     border-radius: 5px;
-    margin-left: 2em;
 }
 
-.hover-mask2 {
+.hover-mask2{
     position: absolute;
     top: 0;
     left: 0;
@@ -547,14 +567,15 @@ footer {
     transition: 1s;
 }
 
+
 .product-icon:before {
-    display: block;
     position: absolute;
     top: -100%;
     opacity: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    border: 1px;
     text-align: center;
     color: inherit;
 }
@@ -600,142 +621,152 @@ footer {
     transition: all 200ms ease-out;
 }
 
+
 /*for slide photo show*/
+
 .content {
     width: 50%;
     background-color: #FFFFFF;
 }
 
 
-
-
 /** page structure **/
+
 #w {
-  display: block;
-  max-width: 830px;
-  min-width: 300px;
-  margin: 0 auto;
-  padding: 2px 3px;
+    display: block;
+    max-width: 830px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 2px 3px;
 }
 
 
 /** posts slider widget **/
+
 .crsl-items {
-  display: block;
-  padding: 5px;
+    display: block;
+    padding: 5px;
 }
 
 .crsl-item {
-  background: #fff;
-  padding: 8px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.4);
-  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+    background: #fff;
+    padding: 8px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .crsl-item .thumbnail {
-  display: block;
-  position: relative;
-  margin-bottom: 10px;
-  cursor: pointer;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
-.crsl-item .thumbnail img { 
-  display: block; /* fix 1px image space http://stackoverflow.com/q/5804256/477958 */
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+
+.crsl-item .thumbnail img {
+    display: block;
+    /* fix 1px image space http://stackoverflow.com/q/5804256/477958 */
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
+
 .crsl-item .thumbnail:hover img {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .crsl-item h3 {
-  font-family: 'Oswald', 'Trebuchet MS', Helvetica, sans-serif;
-  font-size: 1.95em;
-  line-height: 1.25em;
-  margin-bottom: 12px;
+    font-family: 'Oswald', 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 1.95em;
+    line-height: 1.25em;
+    margin-bottom: 12px;
 }
+
 .crsl-item h3 a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
+    color: #333;
 }
+
 .crsl-item h3 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .crsl-item .postdate {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 6px;
-  color: #fff;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
-  font-size: 1.2em;
-  font-weight: bold;
-  background: #4e90da;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 6px;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #4e90da;
 }
 
 .crsl-item p {
-  font-size: 1.2em;
-  line-height: 1.55em;
-  margin-bottom: 5px;
+    font-size: 1.2em;
+    line-height: 1.55em;
+    margin-bottom: 5px;
 }
 
 .crsl-item p.readmore a {
-  display: block;
-  float: right;
-  color: #4e90da;
-  padding: 3px 5px;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+    display: block;
+    float: right;
+    color: #4e90da;
+    padding: 3px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
+
 .crsl-item p.readmore a:hover {
-  background: #4b6caa;
-  color: #fff;
+    background: #4b6caa;
+    color: #fff;
 }
 
 
 /** posts slider nav **/
+
 .slidernav {
-  display: block;
-  text-align: center;
-  margin-bottom: 5px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .slidernav a {
-  display: inline-block;
-  padding: 5px 8px;
-  margin-right: 8px;
-  font-size: 1.4em;
-  background: #fff;
-  color: #666;
-  text-decoration: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-}
-.slidernav a:active {
-  -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-  -moz-box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-  box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 5px 8px;
+    margin-right: 8px;
+    font-size: 1.4em;
+    background: #fff;
+    color: #666;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+.slidernav a:active {
+    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
 
 
 /*owl carousel*/
- #owl-demo .item {
-        margin: 3em;
-    }
-    
-    #owl-demo .item img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+
+#owl-demo .item {
+    margin: 3em;
+}
+
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

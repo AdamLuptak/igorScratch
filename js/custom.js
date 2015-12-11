@@ -12,7 +12,7 @@ $(document).ready(function() {
         play: 4000,
         animation: 'fade'
     });
-
+    /* owl slide ======================================= */
     var owl = $("#owl-demo");
 
     owl.owlCarousel({
@@ -27,13 +27,31 @@ $(document).ready(function() {
 
     });
 
-
+    /* slideshowSwitch ======================================= */
     $(".next").click(function() {
         owl.trigger('owl.next');
     })
     $(".prev").click(function() {
         owl.trigger('owl.prev');
     })
+
+
+    /* countdown ======================================= */
+    var days = 3;
+    var date = new Date();
+    var res = date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+
+    $('#countdown').countdown(res, function(event) {
+        $(this).text(
+            event.strftime('%-d days %H:%M:%S')
+        );
+    });
+    /* show about more  ======================================= */
+    $("#show-btn").click(function() {
+        $('#showme').slideDown("slow");
+        $(this).hide();
+        return false;
+    });
 
 });
 
